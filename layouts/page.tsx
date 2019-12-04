@@ -1,18 +1,19 @@
 import React from 'react'
-import Meta from '~/components/meta'
+import styled, { ThemeProvider } from 'styled-components'
+import Meta from '~/components/Meta/meta'
+import { theme, GlobalStyle } from '~/styles/theme'
+
+const Wrapper = styled.div`
+	height: 100%;
+`
 
 function Page({ children }) {
 	return (
-		<div>
+		<Wrapper>
 			<Meta />
-			{children}
-			<style jsx global>{`
-				body {
-					margin: 0;
-					padding: 0;
-				}
-			`}</style>
-		</div>
+			<GlobalStyle />
+			<ThemeProvider theme={theme}>{children}</ThemeProvider>
+		</Wrapper>
 	)
 }
 
