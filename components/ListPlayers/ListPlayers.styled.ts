@@ -3,24 +3,21 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.div`
 	display: table;
 	table-layout: fixed;
-	min-width: 385px;
 	width: 100%;
 `
 
 export const FilterRow = styled.div`
+	color: #405275;
 	font-size: 1.6rem;
 	font-weight: 700;
 	letter-spacing: 0.5px;
+	margin: 10px 0;
 	text-transform: uppercase;
-	margin-bottom: 1.25rem;
-	margin-top: 0.25rem;
-	color: #405275;
 `
 
 export const Label = styled.span`
 	margin-right: 6px;
 `
-
 export const Item = styled.span`
 	${({ isChecked }) => css`
 		margin: 0 3px;
@@ -37,11 +34,11 @@ export const Item = styled.span`
 `
 
 export const NoPlayerFound = styled.h5`
-	margin-top: 35px;
-	text-transform: uppercase;
 	font-size: 2rem;
 	font-style: normal;
-	font-weight: 700;
 	font-variant: normal;
+	font-weight: 700;
 	line-height: normal;
+	margin-top: 35px;
+	text-transform: uppercase;
 `

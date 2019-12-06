@@ -1,10 +1,8 @@
 import colors from './colors'
-import breakpoints from './breakpoints'
 import { createGlobalStyle } from 'styled-components'
 
 export const theme = {
 	colors,
-	breakpoints,
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -39,7 +37,10 @@ export const GlobalStyle = createGlobalStyle`
     vertical-align: inherit;
     white-space: inherit;
     text-overflow: inherit;
-    text-shadow: inherit;
+		text-shadow: inherit;
+		border-style: none;
+		border-color: unset;
+		border-width: 0;
 	}
 
 	@font-face {

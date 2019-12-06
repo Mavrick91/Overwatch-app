@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	width: 100%;
 	text-align: center;
-
+	width: 100%;
 	& > div {
-		margin: 0 auto;
 		margin-top: 45px;
+		margin: 0 auto;
 	}
 `
 

@@ -20,10 +20,15 @@ function FindPlayer() {
 
 	return (
 		<Wrapper>
-			<H1>player search</H1>
+			<H1 className="sm:text-7xl">player search</H1>
 			<form onSubmit={onSubmit}>
-				<InputText type="text" value={playerName} onChange={handleChange} />
-				<InputSubmit type="submit" />
+				<InputText
+					type="text"
+					value={playerName}
+					onChange={handleChange}
+					className="sm:w-1/2"
+				/>
+				<InputSubmit type="submit" value="SEARCH" className="sm:w-auto" />
 			</form>
 		</Wrapper>
 	)

@@ -1,57 +1,50 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	padding: 42px 0;
+	padding: 0 0 42px 0;
 `
 
 export const H1 = styled.h1`
-	font-size: 6.10352rem;
+	font-family: 'big noodle titling';
+	font-size: 4rem;
+	font-style: italic;
+	font-weight: 400;
 	margin: 0;
 	text-transform: uppercase;
-	font-weight: 400;
-	font-style: italic;
-	font-family: 'big noodle titling';
 `
+
 export const InputText = styled.input`
-	${({ theme: { breakpoints } }) => css`
-		height: 34px;
-		width: 100%;
-		margin-bottom: 10px;
-		padding: 5px;
-		margin-right: 0.5rem;
-		border-radius: 5px;
-		background-clip: padding-box;
-		border: 3px solid rgba(51, 51, 51, 0.25);
-		vertical-align: middle;
-		font-size: 100%;
-
-		@media only screen and (min-width: ${breakpoints.medium}) {
-			width: 60%;
-			margin-bottom: 0;
-		}
-
-		@media only screen and (min-width: ${breakpoints.large}) {
-			width: 360px;
-			margin-bottom: 0;
-		}
-	`}
+	background-clip: padding-box;
+	border-radius: 5px;
+	border: 3px solid rgba(51, 51, 51, 0.25);
+	font-size: 100%;
+	height: 34px;
+	margin-bottom: 10px;
+	margin-right: 0.5rem;
+	padding: 5px;
+	vertical-align: middle;
+	width: 100%;
 `
 
 export const InputSubmit = styled.input`
-	vertical-align: top;
-	padding: 6px 30px;
-	color: #f6f6f6;
 	background-color: #ff9c00;
-	cursor: pointer;
-	text-transform: uppercase;
-	border: 3px solid transparent;
-	font-size: 1.6rem;
 	border-radius: 2px;
+	border: 3px solid transparent;
+	color: #f6f6f6;
+	cursor: pointer;
+	font-family: 'Arial';
+	font-size: 1.2rem;
+	font-weight: bold;
+	letter-spacing: 0.025em;
 	outline: none;
+	padding: 6px 30px;
+	text-transform: uppercase;
 	vertical-align: middle;
+	vertical-align: top;
+	width: 100%;
 
 	&:hover {
-		border-color: #ffb033;
 		background-color: #ffb033;
+		border-color: #ffb033;
 	}
 `

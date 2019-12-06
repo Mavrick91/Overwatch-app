@@ -11,13 +11,13 @@ const Wrapper = styled.div`
 		background-image: url(/background_home.jpg);
 		background-size: cover;
 		min-height: 100%;
-		padding: 72px 30px;
+		padding: 72px 15px;
 	`}
 `
 
 const MaxWidth = styled.div`
-	max-width: 1600px;
 	margin: 0 auto;
+	max-width: 1600px;
 `
 
 const Index = () => (

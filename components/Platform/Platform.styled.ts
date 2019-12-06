@@ -1,116 +1,92 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
+	color: #405275;
 	font-size: 1.6rem;
-	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 0.5px;
-	color: #405275;
+	text-transform: uppercase;
 `
 
-export const PlatformStyled = styled.span`
-	margin-right: 15px;
+export const PlatformStyled = styled.div`
 	color: #405275;
+	margin-right: 15px;
 `
 
 export const UlStyled = styled.ul`
-	display: inline-block;
+	display: inline-flex;
+	flex-wrap: wrap;
 	list-style: none;
+	margin: 10px 0;
 	padding: 0;
-	margin: 0;
 `
 export const LiStyled = styled.li`
-	${({ theme: { breakpoints } }) => css`
-		user-select: none;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		@media only screen and (min-width: ${breakpoints.medium}) {
-			&:first-child {
-				margin-left: 0;
-			}
-		}
-
-		@media only screen and (min-width: ${breakpoints.medium}) {
-			margin-top: 0;
-			display: inline-block;
-			margin-left: 20px;
-		}
-	`}
+	display: inline-block;
+	user-select: none;
+	width: 50%;
 `
 
 export const CheckboxStyled = styled.div`
 	${({ isCheck }) => css`
+		background: #405275;
+		border-radius: 4px;
+		border: 2px solid #f6f6f6;
+		height: 1.2em;
+		left: 0;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		left: 0;
 		width: 1.2em;
-		height: 1.2em;
-		background: #405275;
-		border: 2px solid #f6f6f6;
-		border-radius: 4px;
 
 		&::after {
-			position: absolute;
-			opacity: ${isCheck ? 1 : 0};
-			content: '';
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
 			background-image: url(/checkbox-validate.png);
 			background-size: contain;
+			content: '';
+			height: 100%;
+			left: 0;
+			opacity: ${isCheck ? 1 : 0};
+			position: absolute;
+			top: 0;
+			width: 100%;
 		}
 	`}
 `
 
 export const LabelStyled = styled.label`
-	position: relative;
-	display: inline-block;
-	padding-left: 1.7em;
 	cursor: pointer;
-	height: 1.2em;
-	font-size: 1.6rem;
-	margin-bottom: 15px;
+	display: inline-block;
+	font-size: 1.4rem;
+	padding-left: 1.7em;
+	position: relative;
 `
 
 export const InputStyled = styled.input`
+	opacity: 0;
 	position: absolute;
 	z-index: -1;
-	opacity: 0;
 `
 export const Hr = styled.hr`
-	${({ theme: { breakpoints } }) => css`
-		border: 0;
-		border-bottom: 3px solid rgba(64, 82, 117, 0.5);
-
-		@media only screen and (min-width: ${breakpoints.medium}) {
-			border-bottom-width: 6px;
-		}
-	`}
+	border-bottom: 3px solid rgba(64, 82, 117, 0.5);
 `
 
 export const SearchResultCount = styled.h5`
-	margin-bottom: 12px;
 	font-size: 2rem;
+	margin-bottom: 12px;
 `
 
 export const ProfileStatusBar = styled.div`
-	float: right;
-
+	display: inline-block;
+	font-size: 1.2rem;
+	img {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+	margin: 10px 0;
+	span {
+		margin-left: 0.8rem;
+	}
 	& > * {
 		display: inline-block;
-	}
-
-	img {
-		width: 1.5rem;
-		height: 1.5rem;
-	}
-
-	span {
-		margin-left: 1.5rem;
+		vertical-align: middle;
 	}
 `

@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import styled, { ThemeProvider } from 'styled-components'
 import Meta from '~/components/Meta/meta'
 import { store } from '~/store'
+import '~/styles/index.css'
 import { GlobalStyle, theme } from '~/styles/theme'
 
 const Wrapper = styled.div`
