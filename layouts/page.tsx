@@ -1,7 +1,9 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import styled, { ThemeProvider } from 'styled-components'
 import Meta from '~/components/Meta/meta'
-import { theme, GlobalStyle } from '~/styles/theme'
+import { store } from '~/store'
+import { GlobalStyle, theme } from '~/styles/theme'
 
 const Wrapper = styled.div`
 	height: 100%;
@@ -12,7 +14,9 @@ function Page({ children }) {
 		<Wrapper>
 			<Meta />
 			<GlobalStyle />
-			<ThemeProvider theme={theme}>{children}</ThemeProvider>
+			<ThemeProvider theme={theme}>
+				<Provider store={store}>{children}</Provider>
+			</ThemeProvider>
 		</Wrapper>
 	)
 }

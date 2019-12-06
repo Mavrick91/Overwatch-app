@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import FindPlayer from '~/components/FindPlayer'
+import ListPlayers from '~/components/ListPlayers'
 import Platform from '~/components/Platform'
 import Page from '~/layouts/page'
 
@@ -9,8 +10,8 @@ const Wrapper = styled.div`
 		background-color: ${colors.backgroundHome};
 		background-image: url(/background_home.jpg);
 		background-size: cover;
-		height: 100%;
-		padding: 0 30px;
+		min-height: 100%;
+		padding: 72px 30px;
 	`}
 `
 
@@ -25,6 +26,7 @@ const Index = () => (
 			<MaxWidth>
 				<FindPlayer />
 				<Platform />
+				<ListPlayers />
 			</MaxWidth>
 		</Wrapper>
 	</Page>

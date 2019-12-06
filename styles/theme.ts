@@ -10,6 +10,7 @@ export const theme = {
 export const GlobalStyle = createGlobalStyle`
 	html {
 		font-size: 10px;
+		box-sizing: border-box;
 	}
 
 	body {

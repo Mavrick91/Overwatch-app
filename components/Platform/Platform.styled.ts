@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 
 export const PlatformStyled = styled.span`
 	margin-right: 15px;
+	color: #405275;
 `
 
 export const UlStyled = styled.ul`
@@ -72,7 +73,6 @@ export const LabelStyled = styled.label`
 	padding-left: 1.7em;
 	cursor: pointer;
 	height: 1.2em;
-	color: #405275;
 	font-size: 1.6rem;
 	margin-bottom: 15px;
 `
@@ -91,4 +91,26 @@ export const Hr = styled.hr`
 			border-bottom-width: 6px;
 		}
 	`}
+`
+
+export const SearchResultCount = styled.h5`
+	margin-bottom: 12px;
+	font-size: 2rem;
+`
+
+export const ProfileStatusBar = styled.div`
+	float: right;
+
+	& > * {
+		display: inline-block;
+	}
+
+	img {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	span {
+		margin-left: 1.5rem;
+	}
 `

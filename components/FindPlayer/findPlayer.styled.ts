@@ -22,7 +22,6 @@ export const InputText = styled.input`
 		border-radius: 5px;
 		background-clip: padding-box;
 		border: 3px solid rgba(51, 51, 51, 0.25);
-		height: 18px;
 		vertical-align: middle;
 		font-size: 100%;
 
