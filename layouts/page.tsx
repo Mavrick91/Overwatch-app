@@ -1,18 +1,24 @@
 import React from 'react'
-import Meta from '~/components/meta'
+import { Provider } from 'react-redux'
+import styled, { ThemeProvider } from 'styled-components'
+import Meta from '~/components/Meta/meta'
+import { store } from '~/store'
+import '~/styles/index.css'
+import { GlobalStyle, theme } from '~/styles/theme'
+
+const Wrapper = styled.div`
+	height: 100%;
+`
 
 function Page({ children }) {
 	return (
-		<div>
+		<Wrapper>
 			<Meta />
-			{children}
-			<style jsx global>{`
-				body {
-					margin: 0;
-					padding: 0;
-				}
-			`}</style>
-		</div>
+			<GlobalStyle />
+			<ThemeProvider theme={theme}>
+				<Provider store={store}>{children}</Provider>
+			</ThemeProvider>
+		</Wrapper>
 	)
 }
 
